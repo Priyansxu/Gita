@@ -20,9 +20,9 @@ const Home = () => {
     return (
         <div className="relative">
             <Header />
-            <ChapterList onVerseClick={handleVerseClick} />
+            <Adhyay onVerseClick={handleVerseClick} />
             {selectedChapter !== null && selectedVerse !== null && (
-                <VerseDetail 
+                <Shlok 
                     selectedChapter={selectedChapter} 
                     selectedVerse={selectedVerse} 
                     onClose={handleClose}
