@@ -7,10 +7,10 @@ module.exports = {
     extend: {
       colors: {
         saffron: '#FF9933',
-        deepBlue: '#002366',
+        lightSaffron: '#FFCC99',
         gold: '#FFD700',
-        cream: '#F5F5DC',
-        maroon: '#800020',
+        deepBlue: '#002366',
+        cream: '#F5F5DC'
       },
       fontFamily: {
         serif: ['Merriweather', 'serif'],
