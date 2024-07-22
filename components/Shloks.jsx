@@ -28,7 +28,7 @@ const Shloks = ({ selectedChapter, selectedVerse, onClose }) => {
                 <button onClick={onClose} className="absolute top-2 right-2 text-2xl bg-deepBlue text-white rounded-full w-8 h-8 flex justify-center items-center">
                     &times;
                 </button>
-                <h2 className="text-2xl font-bold mb-4 font-serif text-gold text-center">Shlok</h2>
+                <h2 className="text-2xl font-bold mb-4 font-serif text-saffron text-center">Shlok</h2>
                 <div className="text-deepBlue">
                     <h3 className="text-xl mb-2 text-center">Chapter: {selectedChapter}, Verse: {selectedVerse}</h3>
                     <p className="my-3"><strong>Shlok:</strong> {verseData.shlok}</p>
