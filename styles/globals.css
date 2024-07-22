@@ -1,12 +1,11 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
-    font-family: Arial, sans-serif;
+    @apply font-sans;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-h1, h2, h3 {
-    font-family: 'Georgia, serif';
-}
-button {
-    font-family: Arial, sans-serif;
 }
