@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from '../components/Header';
 import Adhyay from '../components/Adhyay';
-import Shlok from '../components/Shlok';
+import Shloks from '../components/Shloks';
 
 const Home = () => {
     const [selectedChapter, setSelectedChapter] = useState(null);
