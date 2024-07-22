@@ -23,15 +23,17 @@ const Shloks = ({ selectedChapter, selectedVerse, onClose }) => {
     if (!verseData) return null;
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
-            <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full">
-                <button onClick={onClose} className="absolute top-2 right-2 text-2xl">&times;</button>
-                <h2 className="text-2xl font-bold mb-4 font-serif text-gold">Shlok</h2>
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center px-4">
+            <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl w-full relative">
+                <button onClick={onClose} className="absolute top-2 right-2 text-2xl bg-deepBlue text-white rounded-full w-8 h-8 flex justify-center items-center">
+                    &times;
+                </button>
+                <h2 className="text-2xl font-bold mb-4 font-serif text-gold text-center">Shlok</h2>
                 <div className="text-deepBlue">
-                    <h3 className="text-xl mb-2">Chapter: {selectedChapter}, Verse: {selectedVerse}</h3>
-                    <p><strong>Shlok:</strong> {verseData.shlok}</p>
-                    <p><strong>Explanation:</strong> {verseData.tej}</p>
-                    <p><strong>English Translation:</strong> {verseData.trans}</p>
+                    <h3 className="text-xl mb-2 text-center">Chapter: {selectedChapter}, Verse: {selectedVerse}</h3>
+                    <p className="my-3"><strong>Shlok:</strong> {verseData.shlok}</p>
+                    <p className="my-3"><strong>Explanation:</strong> {verseData.tej}</p>
+                    <p className="my-3"><strong>English Translation:</strong> {verseData.trans}</p>
                 </div>
             </div>
         </div>
