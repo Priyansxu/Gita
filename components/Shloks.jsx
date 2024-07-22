@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Modal from './Modal';
 
-const Shloks = ({ selectedChapter, selectedShlok }) => {
+const Shloks = ({ selectedChapter, selectedShlok, onClose }) => {
     const [shlokData, setShlokData] = useState(null);
 
     useEffect(() => {
@@ -21,8 +22,7 @@ const Shloks = ({ selectedChapter, selectedShlok }) => {
     }, [selectedChapter, selectedShlok]);
 
     return (
-        <section className="my-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif text-gold">Shlok</h2>
+        <Modal isOpen={selectedChapter !== null && selectedShlok !== null} onClose={onClose}>
             {shlokData ? (
                 <div className="text-deepBlue">
                     <h3 className="text-xl mb-2">Chapter: {selectedChapter}, Verse: {selectedShlok}</h3>
@@ -33,7 +33,7 @@ const Shloks = ({ selectedChapter, selectedShlok }) => {
             ) : (
                 <p className="text-deepBlue">Select a shlok to see the details.</p>
             )}
-        </section>
+        </Modal>
     );
 };
 
