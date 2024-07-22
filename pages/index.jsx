@@ -12,11 +12,22 @@ const Home = () => {
         setSelectedShlok(shlok);
     };
 
+    const handleClose = () => {
+        setSelectedChapter(null);
+        setSelectedShlok(null);
+    };
+
     return (
-        <div>
+        <div className="relative">
             <Header />
             <Adhyay onShlokClick={handleShlokClick} />
-            <Shloks selectedChapter={selectedChapter} selectedShlok={selectedShlok} />
+            {selectedChapter !== null && selectedShlok !== null && (
+                <Shloks 
+                    selectedChapter={selectedChapter} 
+                    selectedShlok={selectedShlok} 
+                    onClose={handleClose}
+                />
+            )}
         </div>
     );
 };
