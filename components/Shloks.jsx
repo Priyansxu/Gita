@@ -12,11 +12,7 @@ const Shloks = ({ selectedChapter, selectedVerse, onClose }) => {
                     setVerseData({
                         shlok: geeta.slok,
                         tej: geeta.tej.ht,
-                        trans: geeta.siva.et,
-                        summary: {
-                            en: geeta.summary.en,
-                            hi: geeta.summary.hi
-                        }
+                        trans: geeta.siva.et
                     });
                 }).catch(error => {
                     console.error('Error fetching verse data:', error);
@@ -36,11 +32,6 @@ const Shloks = ({ selectedChapter, selectedVerse, onClose }) => {
                     <p><strong>Shlok:</strong> {verseData.shlok}</p>
                     <p><strong>Explanation:</strong> {verseData.tej}</p>
                     <p><strong>English Translation:</strong> {verseData.trans}</p>
-                    <div className="mt-4">
-                        <h4 className="text-lg font-semibold">Summary:</h4>
-                        <p><strong>English:</strong> {verseData.summary.en}</p>
-                        <p><strong>Hindi:</strong> {verseData.summary.hi}</p>
-                    </div>
                 </div>
             </div>
         </div>
