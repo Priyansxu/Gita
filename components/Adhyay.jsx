@@ -33,7 +33,7 @@ const Adhyay = ({ onShlokClick }) => {
             {chapters.map((chapter) => (
                 <div key={chapter.number} className="mb-6">
                     <div 
-                        className="flex justify-between items-center bg-saffron text-deepBlue py-2 px-4 rounded-t cursor-pointer hover:bg-gold transition duration-200"
+                        className="flex justify-between items-center bg-saffron text-deepBlue py-2 px-4 rounded-t cursor-pointer hover:bg-deepBlue hover:text-saffron transition duration-200"
                         onClick={() => handleChapterClick(chapter.number)}
                     >
                         <span>Chapter {chapter.number}</span>
