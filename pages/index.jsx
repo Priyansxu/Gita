@@ -5,26 +5,26 @@ import Shloks from '../components/Shloks';
 
 const Home = () => {
     const [selectedChapter, setSelectedChapter] = useState(null);
-    const [selectedShlok, setSelectedShlok] = useState(null);
+    const [selectedVerse, setSelectedVerse] = useState(null);
 
-    const handleShlokClick = (chapter, shlok) => {
+    const handleVerseClick = (chapter, verse) => {
         setSelectedChapter(chapter);
-        setSelectedShlok(shlok);
+        setSelectedVerse(verse);
     };
 
     const handleClose = () => {
         setSelectedChapter(null);
-        setSelectedShlok(null);
+        setSelectedVerse(null);
     };
 
     return (
         <div className="relative">
             <Header />
-            <Adhyay onShlokClick={handleShlokClick} />
-            {selectedChapter !== null && selectedShlok !== null && (
-                <Shloks 
+            <ChapterList onVerseClick={handleVerseClick} />
+            {selectedChapter !== null && selectedVerse !== null && (
+                <VerseDetail 
                     selectedChapter={selectedChapter} 
-                    selectedShlok={selectedShlok} 
+                    selectedVerse={selectedVerse} 
                     onClose={handleClose}
                 />
             )}
