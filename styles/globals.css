@@ -8,27 +8,3 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
-.bg-orange-400 {
-    @apply bg-orange-400;
-}
-
-.bg-orange-500 {
-    @apply bg-orange-500;
-}
-
-.text-white {
-    @apply text-white;
-}
-
-.cursor-pointer {
-    @apply cursor-pointer;
-}
-
-.transition {
-    @apply transition-all;
-}
-
-.duration-200 {
-    @apply duration-200;
-}
