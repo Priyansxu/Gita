@@ -7,7 +7,7 @@ const Home = () => {
     const [selectedChapter, setSelectedChapter] = useState(null);
     const [selectedVerse, setSelectedVerse] = useState(null);
 
-    const handleVerseClick = (chapter, verse) => {
+    const handleShlokClick = (chapter, verse) => {
         setSelectedChapter(chapter);
         setSelectedVerse(verse);
     };
@@ -20,7 +20,7 @@ const Home = () => {
     return (
         <div className="relative">
             <Header />
-            <Adhyay onVerseClick={handleVerseClick} />
+            <Adhyay onShlokClick={handleShlokClick} />
             {selectedChapter !== null && selectedVerse !== null && (
                 <Shloks 
                     selectedChapter={selectedChapter} 
