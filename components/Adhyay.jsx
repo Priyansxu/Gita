@@ -1,37 +1,25 @@
-// components/Adhyay.js
 const Adhyay = ({ onShlokClick }) => {
     const chapters = Array.from({ length: 18 }, (_, i) => i + 1);
 
     return (
-        <section>
-            <h2>Adhyay</h2>
+        <section className="my-8">
+            <h2 className="text-2xl font-bold mb-4">Adhyay</h2>
             {chapters.map((chapter) => (
-                <div key={chapter}>
-                    <h3>Chapter {chapter}</h3>
-                    <div className="grid">
+                <div key={chapter} className="mb-6">
+                    <h3 className="text-xl mb-2">Chapter {chapter}</h3>
+                    <div className="grid grid-cols-8 gap-2">
                         {Array.from({ length: 72 }, (_, i) => i + 1).map((shlok) => (
-                            <button key={shlok} onClick={() => onShlokClick(chapter, shlok)}>
+                            <button 
+                                key={shlok} 
+                                onClick={() => onShlokClick(chapter, shlok)} 
+                                className="py-2 px-4 border border-gray-300 rounded hover:bg-gray-200"
+                            >
                                 {shlok}
                             </button>
                         ))}
                     </div>
                 </div>
             ))}
-            <style jsx>{`
-                .grid {
-                    display: grid;
-                    grid-template-columns: repeat(8, 1fr);
-                    gap: 10px;
-                    justify-content: center;
-                    align-items: center;
-                }
-                button {
-                    padding: 10px;
-                    border: 1px solid #000;
-                    border-radius: 5px;
-                    cursor: pointer;
-                }
-            `}</style>
         </section>
     );
 };
