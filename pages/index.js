@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Header from '../components/Header';
 import Adhyay from '../components/Adhyay';
-import Shloks from '../components/Shlok';
+import Shloks from '../components/Shloks';
 
 const Home = () => {
     const [selectedChapter, setSelectedChapter] = useState(null);
@@ -22,7 +22,7 @@ const Home = () => {
             <Header />
             <Adhyay onShlokClick={handleShlokClick} />
             {selectedChapter !== null && selectedVerse !== null && (
-                <Shlok 
+                <Shloks 
                     selectedChapter={selectedChapter} 
                     selectedVerse={selectedVerse} 
                     onClose={handleClose}
