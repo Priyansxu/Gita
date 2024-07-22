@@ -6,7 +6,7 @@ const Shloks = ({ selectedChapter, selectedShlok }) => {
 
     useEffect(() => {
         if (selectedChapter !== null && selectedShlok !== null) {
-            axios.get(`https://bhagavadgitaapi.in/slok/${selectedChapter}/${selectedShlok}`)
+            axios.get(`https://vedicscriptures.github.io/slok/${selectedChapter}/${selectedShlok}`)
                 .then(response => {
                     const geeta = response.data;
                     setShlokData({
