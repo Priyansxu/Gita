@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const VerseDetail = ({ selectedChapter, selectedVerse, onClose }) => {
+const Shlok = ({ selectedChapter, selectedVerse, onClose }) => {
     const [verseData, setVerseData] = useState(null);
 
     useEffect(() => {
@@ -47,4 +47,4 @@ const VerseDetail = ({ selectedChapter, selectedVerse, onClose }) => {
     );
 };
 
-export default VerseDetail;
+export default Shlok;
