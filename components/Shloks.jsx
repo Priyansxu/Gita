@@ -22,16 +22,16 @@ const Shloks = ({ selectedChapter, selectedShlok }) => {
 
     return (
         <section className="my-8">
-            <h2 className="text-2xl font-bold mb-4">Shlok</h2>
+            <h2 className="text-2xl font-bold mb-4 font-serif text-gold">Shlok</h2>
             {shlokData ? (
-                <div>
+                <div className="text-deepBlue">
                     <h3 className="text-xl mb-2">Chapter: {selectedChapter}, Verse: {selectedShlok}</h3>
                     <p><strong>Shlok:</strong> {shlokData.shlok}</p>
                     <p><strong>Explanation:</strong> {shlokData.tej}</p>
                     <p><strong>English Translation:</strong> {shlokData.trans}</p>
                 </div>
             ) : (
-                <p>Select a shlok to see the details.</p>
+                <p className="text-deepBlue">Select a shlok to see the details.</p>
             )}
         </section>
     );
