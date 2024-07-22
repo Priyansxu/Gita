@@ -21,11 +21,11 @@ const Shloks = ({ selectedChapter, selectedShlok }) => {
     }, [selectedChapter, selectedShlok]);
 
     return (
-        <section>
-            <h2>Shlok</h2>
+        <section className="my-8">
+            <h2 className="text-2xl font-bold mb-4">Shlok</h2>
             {shlokData ? (
                 <div>
-                    <h3>Chapter: {selectedChapter}, Verse: {selectedShlok}</h3>
+                    <h3 className="text-xl mb-2">Chapter: {selectedChapter}, Verse: {selectedShlok}</h3>
                     <p><strong>Shlok:</strong> {shlokData.shlok}</p>
                     <p><strong>Explanation:</strong> {shlokData.tej}</p>
                     <p><strong>English Translation:</strong> {shlokData.trans}</p>
