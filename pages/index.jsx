@@ -22,7 +22,7 @@ const Home = () => {
             <Header />
             <Adhyay onVerseClick={handleVerseClick} />
             {selectedChapter !== null && selectedVerse !== null && (
-                <Shlok 
+                <Shloks 
                     selectedChapter={selectedChapter} 
                     selectedVerse={selectedVerse} 
                     onClose={handleClose}
