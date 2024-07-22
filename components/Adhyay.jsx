@@ -28,15 +28,19 @@ const Adhyay = ({ onShlokClick }) => {
     };
 
     return (
-        <section className="my-8">
-            <h2 className="text-2xl font-bold mb-4 font-serif text-gold">Adhyay</h2>
+        <section className="my-8 px-4">
+            <h2 className="text-2xl font-bold mb-4 text-saffron">Adhyay</h2>
             {chapters.map((chapter) => (
                 <div key={chapter.number} className="mb-6">
                     <div 
-                        className="bg-saffron text-deepBlue py-2 px-4 rounded cursor-pointer hover:bg-gold transition duration-200"
+                        className="flex justify-between items-center bg-saffron text-deepBlue py-2 px-4 rounded-t cursor-pointer hover:bg-gold transition duration-200"
                         onClick={() => handleChapterClick(chapter.number)}
                     >
-                        Chapter {chapter.number}: {chapter.title}
+                        <span>Chapter {chapter.number}</span>
+                        <span>View &raquo;</span>
+                    </div>
+                    <div className="bg-lightSaffron text-deepBlue py-2 px-4 rounded-b">
+                        {chapter.title}
                     </div>
                     {selectedChapter === chapter.number && (
                         <div className="grid grid-cols-8 gap-2 mt-4">
