@@ -27,34 +27,34 @@ const Adhyay = ({ onShlokClick }) => {
         setSelectedChapter(chapter === selectedChapter ? null : chapter);
     };
 
-    return (
-        <section className="my-8">
-            <h2 className="text-2xl font-bold mb-4">Adhyay</h2>
-            {chapters.map((chapter) => (
-                <div key={chapter.number} className="mb-6">
-                    <div 
-                        className="bg-orange-400 text-white py-2 px-4 rounded cursor-pointer hover:bg-orange-500 transition duration-200"
-                        onClick={() => handleChapterClick(chapter.number)}
-                    >
-                        Chapter {chapter.number}: {chapter.title}
-                    </div>
-                    {selectedChapter === chapter.number && (
-                        <div className="grid grid-cols-8 gap-2 mt-4">
-                            {Array.from({ length: 78 }, (_, i) => i + 1).map((shlok) => (
-                                <button 
-                                    key={shlok} 
-                                    onClick={() => onShlokClick(chapter.number, shlok)} 
-                                    className="py-2 px-4 border border-gray-300 rounded hover:bg-gray-200 transition duration-200"
-                                >
-                                    {shlok}
-                                </button>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            ))}
-        </section>
-    );
+  return (
+    <section className="my-8 px-4">
+      <h2 className="text-2xl font-bold mb-4">Adhyay</h2>
+      {chapters.map((chapter) => (
+        <div key={chapter.number} className="mb-6">
+          <div
+            className="bg-primary text-white py-2 px-4 rounded cursor-pointer hover:bg-secondary transition duration-200"
+            onClick={() => handleChapterClick(chapter.number)}
+          >
+            Chapter {chapter.number}: {chapter.title}
+          </div>
+          {selectedChapter === chapter.number && (
+            <div className="grid grid-cols-8 gap-2 mt-4">
+              {Array.from({ length: 43 }, (_, i) => i + 1).map((shlok) => (
+                <button
+                  key={shlok}
+                  onClick={() => onShlokClick(chapter.number, shlok)}
+                  className="py-2 px-4 border border-gray-300 rounded hover:bg-gray-200 transition duration-200"
+                >
+                  {shlok}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </section>
+  );
 };
 
 export default Adhyay;
