@@ -40,7 +40,7 @@ const Adhyay = ({ onShlokClick }) => {
                     </div>
                     {selectedChapter === chapter.number && (
                         <div className="grid grid-cols-8 gap-2 mt-4">
-                            {Array.from({ length: 43 }, (_, i) => i + 1).map((shlok) => (
+                            {Array.from({ length: 78 }, (_, i) => i + 1).map((shlok) => (
                                 <button 
                                     key={shlok} 
                                     onClick={() => onShlokClick(chapter.number, shlok)} 
