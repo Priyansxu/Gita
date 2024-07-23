@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 import Header from '../components/Header';
 import Adhyay from '../components/Adhyay';
 import Shlok from '../components/Shlok';
@@ -20,15 +21,19 @@ const Home = () => {
 
     return (
         <div className="relative min-h-screen flex flex-col">
+            <Head>
+                <title>Bhagavad Gita</title>
+                <meta name="description" content="Read and explore the verses of the Bhagavad Gita." />
+            </Head>
             <Header />
             <main className="flex-grow">
                 <Adhyay onShlokClick={handleShlokClick} />
                 {selectedChapter !== null && selectedVerse !== null && (
-                <Shlok 
+                    <Shlok 
                         selectedChapter={selectedChapter} 
                         selectedVerse={selectedVerse} 
                         onClose={handleClose}
-                        />
+                    />
                 )}
             </main>
             <Footer />
