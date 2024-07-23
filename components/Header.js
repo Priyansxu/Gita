@@ -12,8 +12,8 @@ const Header = () => {
           <Image 
             src={fluteImage} 
             alt="Flute" 
-            width={30} 
-            height={30} 
+            width={50} 
+            height={50} 
             className="ml-2 object-contain"
           />
         </p>
