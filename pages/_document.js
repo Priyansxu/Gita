@@ -4,6 +4,8 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#002366" />
         <meta name="description" content="Bhagavad Gita Shloks." />
         <meta name="author" content="Sacred verses of the Bhagavad Gita." />
