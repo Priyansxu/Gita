@@ -3,29 +3,20 @@ import axios from 'axios';
 
 const Shlok = ({ selectedChapter, selectedVerse, onClose }) => {
     const [verseData, setVerseData] = useState(null);
-    const [verseSummary, setVerseSummary] = useState('');
 
     useEffect(() => {
         if (selectedChapter !== null && selectedVerse !== null) {
             axios.get(`https://vedicscriptures.github.io/slok/${selectedChapter}/${selectedVerse}`)
                 .then(response => {
                     const geeta = response.data;
-               setVerseData({
-                  shlok: geeta.slok,
-                  hindi: geeta.tej.ht,
-                  english: geeta.siva.et
+                    setVerseData({
+                        shlok: geeta.slok,
+                        tran: geeta.transliteration,
+                        hindi: geeta.tej.ht,
+                        english: geeta.siva.et
                     });
                 }).catch(error => {
-
-                });
-
-            axios.get('/summary.json')
-                .then(response => {
-                    const summaries = response.data;
-                    const summary = summaries[selectedChapter]?.[selectedVerse] || 'Summary not available';
-                    setVerseSummary(summary);
-                }).catch(error => {
-
+                    console.error('Error fetching verse data:', error);
                 });
         }
     }, [selectedChapter, selectedVerse]);
@@ -42,9 +33,9 @@ const Shlok = ({ selectedChapter, selectedVerse, onClose }) => {
                 <div className="text-deepBlue">
                     <h3 className="text-lg md:text-xl mb-2 text-center">Chapter: {selectedChapter}, Verse: {selectedVerse}</h3>
                     <p className="my-2 text-sm md:text-base"><strong>Shlok:</strong> {verseData.shlok}</p>
+                    <p className="my-2 text-sm md:text-base"><strong>Transliteration:</strong> {verseData.tran}</p>
                     <p className="my-2 text-sm md:text-base"><strong>Explanation:</strong> {verseData.hindi}</p>
                     <p className="my-2 text-sm md:text-base"><strong>English Translation:</strong> {verseData.english}</p>
-                    <p className="my-2 text-sm md:text-base"><strong>Summary:</strong> {verseSummary}</p>
                 </div>
             </div>
         </div>
