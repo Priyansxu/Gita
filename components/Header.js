@@ -10,14 +10,13 @@ const Header = () => {
           Bhagavad&nbsp;Gita
         </p>
       </div>
-      <div className="relative mx-auto">
+      <div className="relative mx-auto my-8 p-4 shadow-lg">
         <Image 
           src={headerImage} 
           alt="Bhagavad Gita" 
           layout="responsive" 
-          className="object-cover"
+          className="object-cover rounded-lg shadow-md"
         />
-        <div className="absolute rounded-lg" />
       </div>
       <p className="mt-4 px-4 font-sans text-deepBlue text-lg italic">
         "In the midst of the battle, Krishna imparts timeless wisdom to guide the soul."
