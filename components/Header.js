@@ -17,7 +17,7 @@ const Header = () => {
           layout="responsive" 
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50 bottom-0 h-32" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black to-transparent" />
       </div>
       <p className="mt-4 px-4 font-sans text-deepBlue text-lg italic">
         "In the midst of the battle, Krishna imparts timeless wisdom to guide the soul."
