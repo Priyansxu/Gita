@@ -42,7 +42,7 @@ const Shlok = ({ selectedChapter, selectedVerse, onClose }) => {
                 <h2 className="text-xl md:text-2xl font-bold mb-4 font-serif text-saffron text-center">Shlok</h2>
                 <div className="text-deepBlue">
                     <h3 className="text-lg md:text-xl mb-2 text-center">Chapter: {selectedChapter}, Verse: {selectedVerse}</h3>
-                    <p className="my-2 text-sm md:text-base"><strong>Shlok:</strong> {verseData.shlok}</please>
+                    <p className="my-2 text-sm md:text-base"><strong>Shlok:</strong> {verseData.shlok}</p>
                     <p className="my-2 text-sm md:text-base"><strong>Transliteration:</strong> {verseData.tran}</p>
                     <p className="my-2 text-sm md:text-base"><strong>Explanation:</strong> {verseData.hindi}</p>
                     <p className="my-2 text-sm md:text-base"><strong>English Translation:</strong> {verseData.english}</p>
