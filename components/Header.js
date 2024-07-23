@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header className="relative text-center my-8 px-4">
       <div className="fixed left-0 top-0 w-full max-w-5xl bg-gradient-to-b from-deepBlue to-transparent border-b border-deepBlue backdrop-blur-2xl z-10 pb-5">
-        <p className="text-center text-saffron text-4xl lg:text-2xl font-serif py-2">
+        <p className="text-center text-saffron text-xl lg:text-2xl font-serif py-2">
           Bhagavad&nbsp;Gita
         </p>
       </div>
