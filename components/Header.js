@@ -10,7 +10,7 @@ const Header = () => {
           Bhagavad&nbsp;Gita
         </p>
       </div>
-      <div className="relative mx-auto my-8 p-4 shadow-lg">
+      <div className="relative mx-auto my-7 p-3 shadow-lg">
         <Image 
           src={headerImage} 
           alt="Bhagavad Gita" 
