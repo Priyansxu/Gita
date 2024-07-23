@@ -9,11 +9,11 @@ const Shlok = ({ selectedChapter, selectedVerse, onClose }) => {
             axios.get(`https://vedicscriptures.github.io/slok/${selectedChapter}/${selectedVerse}`)
                 .then(response => {
                     const geeta = response.data;
-                    setVerseData({
-                        shlok: geeta.slok,
-                        tran: geeta.transliteration,
-                        hindi: geeta.tej.ht,
-                        english: geeta.siva.et
+              setVerseData({
+                  shlok: geeta.slok,
+                  tran: geeta.transliteration,
+                  hindi: geeta.tej.ht,
+                  english: geeta.prabhu.et
                     });
                 }).catch(error => {
                     console.error('Error fetching verse data:', error);
