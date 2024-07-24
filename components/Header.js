@@ -18,7 +18,8 @@ const Header = () => {
           />
         </p>
       </div>
-      <div className="relative mx-auto my-7 p-3 pt-5 shadow-lg">
+      <div className="pt-8">
+      <div className="relative mx-auto my-7 p-3 shadow-lg">
         <Image 
           src={headerImage} 
           alt="Bhagavad Gita" 
@@ -29,6 +30,7 @@ const Header = () => {
       <p className="mt-4 px-4 font-sans text-deepBlue text-lg italic">
         "In the midst of the battle, Krishna imparts timeless wisdom to guide the soul."
       </p>
+    </div>
     </header>
   );
 };
