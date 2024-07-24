@@ -8,7 +8,7 @@ const Footer = () => {
         <p className="text-sm font-serif">
           Made with love by{' '}
           <Link href="https://www.instagram.com/pusxoo">
-            <a className="font-serif text-saffron hover:text-lightSaffron transition-colors">
+            <a className="font-serif text-saffron hover:text-lightSaffron transition-colors underline decoration-gold">
               <strong>Priyanshu 🪷</strong>
             </a>
            </Link>
