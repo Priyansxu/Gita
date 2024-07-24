@@ -25,9 +25,14 @@ const Home = () => {
                 <title>Bhagavad Gita</title>
                 <meta name="description" content="Read and explore the verses of the Bhagavad Gita." />
             </Head>
-            <Header />
+            <div className="relative">
+                <div className="absolute inset-0 bg-white opacity-70 z-10"></div>
+                <div className="relative z-20">
+                    <Header />
+                    <Adhyay onShlokClick={handleShlokClick} />
+                </div>
+            </div>
             <main className="flex-grow">
-                <Adhyay onShlokClick={handleShlokClick} />
                 {selectedChapter !== null && selectedVerse !== null && (
                     <Shlok 
                         selectedChapter={selectedChapter} 
