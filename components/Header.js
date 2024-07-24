@@ -5,8 +5,8 @@ import fluteImage from '../public/flute.png';
 
 const Header = () => {
   return (
-    <header className="relative text-center my-8">
-      <div className="fixed left-0 top-0 w-full max-w-5xl bg-deepBlue border-b border-deepBlue backdrop-blur-2xl z-10 pb-4 mb-20">
+    <header className="relative text-center my-8 px-4">
+      <div className="fixed left-0 top-0 w-full max-w-5xl bg-deepBlue border-b border-deepBlue backdrop-blur-2xl z-10 mb-20">
         <p className="text-center text-saffron text-2xl lg:text-2xl font-serif py-2 flex items-center justify-center">
           Bhagavad&nbsp;Gita
           <Image 
@@ -18,7 +18,7 @@ const Header = () => {
           />
         </p>
       </div>
-      <div className="relative mx-auto my-7 p-3 shadow-lg">
+      <div className="relative mx-auto my-7 p-3 pt-5 shadow-lg">
         <Image 
           src={headerImage} 
           alt="Bhagavad Gita" 
