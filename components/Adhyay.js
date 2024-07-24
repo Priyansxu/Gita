@@ -28,7 +28,7 @@ const Adhyay = ({ onShlokClick }) => {
     };
 
     return (
-        <section className="my-8 px-4">
+        <section className="my-8 px-10">
             <h2 className="text-2xl font-bold mb-4 text-saffron">Adhyay</h2>
             {chapters.map((chapter) => (
                 <div key={chapter.number} className="mb-6">
